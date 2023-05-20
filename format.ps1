@@ -8,8 +8,8 @@ Add-AppxPackage -Path "C:\Users\Usuário\Downloads\Winget.msixbundle"
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 #Configurando o usuário para o grupo Administradores
 Add-LocalGroupMember -Group "Administradores" -Member "Usuário"
-
-Invoke-WebRequest -Uri "https://trello.com/1/cards/645a43925195e2b10e4205e5/attachments/645a43c1bfafadfdcde2be31/download/Logo_Simples_Colorida.png" -OutFile "C:\Users\Usuário\Downloads\user.png"
+#Fazer downloads dos arquivos user e wallpaper
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "C:\Users\Usuário\Downloads\user.png"
 Invoke-WebRequest -Uri "https://trello.com/1/cards/645a43925195e2b10e4205e5/attachments/645a43dc4cf4eeee4912dd27/download/wallpaper.png" -OutFile "C:\Users\Usuário\Downloads\wallpaper.png"
 
 Copy-Item -Path "C:\Users\Usuário\Downloads\user.png" -Destination "C:\Windows\Web\Charles Silvano"
