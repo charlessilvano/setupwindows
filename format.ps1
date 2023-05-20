@@ -1,4 +1,4 @@
-
+#Desabilitar as restrições do Powershell
 Set-ExecutionPolicy Unrestricted
 
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "C:\Users\Usuário\Downloads\Winget.msixbundle"
