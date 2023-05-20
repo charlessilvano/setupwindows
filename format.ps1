@@ -1,12 +1,13 @@
 #Desabilitar as restrições do Powershell
 Set-ExecutionPolicy Unrestricted
-
+#Fazer download do pacote WinGet
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "C:\Users\Usuário\Downloads\Winget.msixbundle"
+#Executar instalação do pacote WinGet
 Add-AppxPackage -Path "C:\Users\Usuário\Downloads\Winget.msixbundle"
-
+#Criando um direto de arquivos de mídia
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
-
-Add-LocalGroupMember -Group 'Administradores' -Member 'Usuário'
+#Configurando o usuário para o grupo Administradores
+Add-LocalGroupMember -Group "Administradores" -Member "Usuário"
 
 Invoke-WebRequest -Uri "https://trello.com/1/cards/645a43925195e2b10e4205e5/attachments/645a43c1bfafadfdcde2be31/download/Logo_Simples_Colorida.png" -OutFile "C:\Users\Usuário\Downloads\user.png"
 Invoke-WebRequest -Uri "https://trello.com/1/cards/645a43925195e2b10e4205e5/attachments/645a43dc4cf4eeee4912dd27/download/wallpaper.png" -OutFile "C:\Users\Usuário\Downloads\wallpaper.png"
