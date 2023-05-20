@@ -10,8 +10,8 @@ New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 Add-LocalGroupMember -Group "Administradores" -Member "Usuário"
 #Fazer downloads dos arquivos user e wallpaper
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "C:\Users\Usuário\Downloads\user.png"
-Invoke-WebRequest -Uri "https://trello.com/1/cards/645a43925195e2b10e4205e5/attachments/645a43dc4cf4eeee4912dd27/download/wallpaper.png" -OutFile "C:\Users\Usuário\Downloads\wallpaper.png"
-
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/wallpaper.png" -OutFile "C:\Users\Usuário\Downloads\wallpaper.png"
+#Copiando os arquivos para a pasta de mídia
 Copy-Item -Path "C:\Users\Usuário\Downloads\user.png" -Destination "C:\Windows\Web\Charles Silvano"
 Copy-Item -Path "C:\Users\Usuário\Downloads\wallpaper.png" -Destination "C:\Windows\Web\Charles Silvano"
 
