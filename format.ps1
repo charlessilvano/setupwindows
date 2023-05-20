@@ -1,7 +1,7 @@
 
 Set-ExecutionPolicy Unrestricted
 
-Invoke-WebRequest -Uri "https://file.notion.so/f/s/8fcfdda3-3f69-49a7-b225-8a4d08b2eb75/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle?id=5bd193ab-ea07-43c2-9ddf-f9f5e90c5e21&table=block&spaceId=e2e3fc15-fa09-4d25-8b3f-a651c7cad2fd&expirationTimestamp=1683739062542&signature=qdvbGU_dejS6Ot257c2UpM7sY6D6UvgS4ZzuFxgqT0Y&downloadName=Microsoft.DesktopAppInstaller.msixbundle" -OutFile "C:\Users\Usuário\Downloads\Winget.msixbundle"
+Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "C:\Users\Usuário\Downloads\Winget.msixbundle"
 Add-AppxPackage -Path "C:\Users\Usuário\Downloads\Winget.msixbundle"
 
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
