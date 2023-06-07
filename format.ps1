@@ -8,6 +8,8 @@ Add-AppxPackage -Path "$env:USERPROFILE\Downloads\Winget.msixbundle"
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 #Configurando o usuário para o grupo Administradores
 Add-LocalGroupMember -Group "Administradores" -Member "Usuario"
+#Download do pacote Microsoft Office
+Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/office.exe" -OutFile "$env:USERPROFILE\Downloads"
 #Fazer downloads dos arquivos user e wallpaper
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "$env:USERPROFILE\Downloads\user.png"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/wallpaper.png" -OutFile "$env:USERPROFILE\Downloads\wallpaper.png"
