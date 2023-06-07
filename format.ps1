@@ -7,7 +7,7 @@ Add-AppxPackage -Path "$env:USERPROFILE\Downloads\Winget.msixbundle"
 #Criando um direto de arquivos de mídia
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 #Configurando o usuário para o grupo Administradores
-Add-LocalGroupMember -Group "Administradores" -Member "Usuário"
+Add-LocalGroupMember -Group "Administradores" -Member "Usuario"
 #Fazer downloads dos arquivos user e wallpaper
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "$env:USERPROFILE\Downloads\user.png"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/wallpaper.png" -OutFile "$env:USERPROFILE\Downloads\wallpaper.png"
@@ -35,8 +35,8 @@ winget uninstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe --silent
 winget uninstall Microsoft.Todos_8wekyb3d8bbwe --silent
 winget uninstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --silent
 #Configurando nome de usuário
-$NewName = Read-Host -Promp "Digite o novo nome de usuário"
-Rename-LocalUser -Name "Usuário" -NewName $NewName
+$NewName = Read-Host -Promp "Digite o novo nome de usuario"
+Rename-LocalUser -Name "Usuario" -NewName $NewName
 #Configurando nome do computador
 $Computador = Read-Host "Digite o novo nome do Computador"
 Rename-Computer -NewName $Computador
