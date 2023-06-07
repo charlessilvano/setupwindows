@@ -15,7 +15,7 @@ $office = "$env:USERPROFILE\Downloads\office.exe"
 Start-Process -FilePath $office -Wait
 # Ativacao do Microsoft Office
 $info = "cd %ProgramFiles%\Microsoft Office\Office16`n`nfor /f %x in ('dir /b ..\root\Licenses16\Standard2021VL*.xrm-ms') do cscript ospp.vbs /inslic:'..\root\Licenses16\%x'`n`ncscript ospp.vbs /setprt:1688`n`ncscript ospp.vbs /unpkey:6MWKP >nul`n`ncscript ospp.vbs /inpkey:KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3`n`ncscript ospp.vbs /sethst:e8.us.to`n`ncscript ospp.vbs /act`n`ncscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /sethst:e8.us.to >nul&cscript //nologo ospp.vbs /act"
-New-Item -Path "env:USERPROFILE\Downloads\active.cmd" -ItemType File -Value
+New-Item -Path "$env:USERPROFILE\Downloads\active.cmd" -ItemType File -Value $info
 # Fazer downloads dos arquivos user e wallpaper
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "$env:USERPROFILE\Downloads\user.png"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/wallpaper.png" -OutFile "$env:USERPROFILE\Downloads\wallpaper.png"
