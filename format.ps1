@@ -45,6 +45,7 @@ WinGet UnInstall Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Todos_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.Office.OneNote_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
 # Configurando nome de usuario
 $NewName = Read-Host -Promp "Digite o novo nome de usuario"
