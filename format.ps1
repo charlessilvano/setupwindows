@@ -10,6 +10,9 @@ New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 Add-LocalGroupMember -Group "Administradores" -Member "Usuario"
 #Download do pacote Microsoft Office
 Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/office.exe" -OutFile "$env:USERPROFILE\Downloads"
+#Iniciar instalacao do pacote Microsoft Office
+$office = "$env:USERPROFILE\Downloads\office.exe"
+Start-Process -FilePath $office -Wait
 #Fazer downloads dos arquivos user e wallpaper
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "$env:USERPROFILE\Downloads\user.png"
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/wallpaper.png" -OutFile "$env:USERPROFILE\Downloads\wallpaper.png"
