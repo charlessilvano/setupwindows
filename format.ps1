@@ -22,6 +22,7 @@ Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalizatio
 #Instalando programas padrões
 winget install 7zip.7zip --silent
 winget install Google.Chrome --silent
+winget install Easeware.Drivereasy --silent
 winget install XPDM1ZW6815MQM --silent
 winget install XPDP273C0XHQH2 --silent
 #Removendo programas sem utilidade
