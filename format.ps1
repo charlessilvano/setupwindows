@@ -9,7 +9,7 @@ New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 # Configurando o usuario para o grupo Administradores
 Add-LocalGroupMember -Group "Administradores" -Member "Usuario"
 # Download do pacote Microsoft Office
-Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/office.exe" -OutFile "$env:USERPROFILE\Downloads"
+Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/office.exe" -OutFile "$env:USERPROFILE\Downloads\office.exe"
 # Iniciar instalacao do pacote Microsoft Office
 $office = "$env:USERPROFILE\Downloads\office.exe"
 Start-Process -FilePath $office -Wait
