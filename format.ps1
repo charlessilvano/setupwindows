@@ -42,6 +42,7 @@ WinGet UnInstall Microsoft.SkypeApp_kzf8qxf38zg5c --Silent
 WinGet UnInstall Microsoft.Microsoft3DViewer_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.MixedReality.Portal_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe --Silent
+WinGet UnInstall SpotifyAB.SpotifyMusic_zpdnekdrzrea0 --Silent
 WinGet UnInstall Disney.37853FC22B2CE_6rarf9sa4v8jt --Silent
 WinGet UnInstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe --Silent
