@@ -1,5 +1,7 @@
 # Desabilitar as restricoes do Powershell
 Set-ExecutionPolicy Unrestricted
+# Definir o repositorio como seguro para instalacoes.
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 # Fazer download do pacote WinGet
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "$env:USERPROFILE\Downloads\Winget.msixbundle"
 # Executar instalacoo do pacote WinGet
