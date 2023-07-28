@@ -37,6 +37,7 @@ Copy-Item -Path "$env:USERPROFILE\Downloads\wallpaper.png" -Destination "C:\Wind
 
 # Configurando a foto de usuário e papel de parede
 Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value 'C:\Windows\Web\Charles Silvano\wallpaper.png'
+Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\Background' -Name Wallpaper -Value 'C:\Windows\Charles Silvano\wallpaper.png'
 
 # Instalando programas padroes
 WinGet Install 7zip.7zip --Silent
