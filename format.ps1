@@ -8,7 +8,7 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "$env:USERPROFILE\Downloads\Winget.msixbundle"
 
 # Fazer download do certificado de garantia do serviço de formatacao
-Invoke-WebRequest -Uri 'https://raw.github.com/charlessilvano/setupwindows/main/files/CSTI.p12' -OutFile '$env:USERPROFILE\Downloads\CSTI.p12'
+Invoke-WebRequest -Uri 'https://raw.github.com/charlessilvano/setupwindows/main/files/CSTI.p12' -OutFile $env:USERPROFILE\Downloads\CSTI.p12
 
 # Insercao de senha raiz
 $Password = Read-Host -Promp "Digite a senha master"
