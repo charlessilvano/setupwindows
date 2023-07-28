@@ -5,7 +5,7 @@ Set-ExecutionPolicy Unrestricted
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
-Start-Process ms-windows-store:AppUpdate
+Start-Process ms-windows-store:AppUpdate -Wait
 Write-Host "Atualização de programas finalizada"
 
 # Fazer download do pacote WinGet
