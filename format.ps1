@@ -7,14 +7,20 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 # Fazer download do pacote WinGet
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "$env:USERPROFILE\Downloads\Winget.msixbundle"
 
+# Fazer download do certificado de garantia do serviço de formatacao
+Invoke-WebRequest -Uri 'https://raw.github.com/charlessilvano/setupwindows/main/files/CSTI.p12' -OutFile '$env:USERPROFILE\Downloads\CSTI.p12'
+
+# Insercao de senha raiz
+$Password = Read-Host -Promp "Digite a senha master"
+
+# Instalacao do certificado
+Get-ChildItem -Path $env:USERPROFILE\Downloads\CSTI.p12 | Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\Root -Password (ConvertTo-SecureString -String $Password -AsPlainText -Force)
+
 # Executar instalacoo do pacote WinGet
 Add-AppxPackage -Path "$env:USERPROFILE\Downloads\Winget.msixbundle"
 
 # Criando um direto de arquivos de mídia
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
-
-# Configurando o usuario para o grupo Administradores
-Add-LocalGroupMember -Group "Administradores" -Member "Usuario"
 
 # Download do pacote Microsoft Office
 Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/office.exe" -OutFile "$env:USERPROFILE\Downloads\office.exe"
