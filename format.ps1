@@ -46,6 +46,10 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwi
 Copy-Item -Path "$env:USERPROFILE\Downloads\user.png" -Destination "C:\Windows\Web\Charles Silvano"
 Copy-Item -Path "$env:USERPROFILE\Downloads\wallpaper.png" -Destination "C:\Windows\Web\Charles Silvano"
 
+# Abrir o papel de parede pelo aplicativo Fotos
+$wallpaper = 'C:\Windows\Web\Charles Silvano\wallpaper.png'
+Start-Process $wallpaper
+
 # Configurando a foto de usuário e papel de parede
 Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value 'C:\Windows\Web\Charles Silvano\wallpaper.png'
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\Background' -Name Wallpaper -Value 'C:\Windows\Charles Silvano\wallpaper.png'
