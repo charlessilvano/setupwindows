@@ -8,8 +8,8 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 Set−Volume −DriveLetter 'C' −NewFileSystemLabel 'Windows'
 
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
-Start-Process ms-windows-store:AppUpdate
-Start-Process notepad -Wait
+Write-Host "Inicie a Microsoft Store e atualize todos os programas, antes de continuar com a configuracao"
+pause
 Write-Host "Atualizacao de programas finalizada"
 
 # Fazer download do pacote WinGet
