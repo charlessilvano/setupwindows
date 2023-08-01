@@ -4,6 +4,9 @@ Set-ExecutionPolicy Unrestricted
 # Definir o repositorio como seguro para instalacoes.
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
+# Renomear a particao do disco principal
+Set−Volume −DriveLetter 'C' −NewFileSystemLabel 'Windows'
+
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
 Start-Process ms-windows-store:AppUpdate
 Start-Process notepad -Wait
