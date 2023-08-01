@@ -87,7 +87,7 @@ WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
 
 # Como verificar os caches do processador
 Write-Host "Por favor, abra o Gerenciador de Tarefas e na aba Desempenho verifique quais os valores de cacheado processador."
-$input = Read-Host -Prompt "Pressione qualquer tecla para continuar."
+$input = Read-Host -Prompt "Pressione qualquer tecla para continuar"
 
 # Inserindo o valor do cache L2
 Write-Host "Qual e o valor do cache L2 em KB?"
