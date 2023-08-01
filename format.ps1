@@ -10,7 +10,7 @@ Set−Volume −DriveLetter 'C' −NewFileSystemLabel 'Windows'
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
 Start-Process ms-windows-store:AppUpdate
 Start-Process notepad -Wait
-Write-Host "Atualização de programas finalizada"
+Write-Host "Atualizacao de programas finalizada"
 
 # Fazer download do pacote WinGet
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.4.10173/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "$env:USERPROFILE\Downloads\Winget.msixbundle"
