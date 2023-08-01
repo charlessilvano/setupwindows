@@ -61,10 +61,6 @@ Start-Process $wallpaper
 Write-Host 'Se o papel de parede estiver definido, feche o aplicativo Fotos e pressione qualquer tecla para continuar'
 pause
 
-# Configurando a foto de usuário e papel de parede
-Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value 'C:\Windows\Web\Charles Silvano\wallpaper.png'
-Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\Background' -Name Wallpaper -Value 'C:\Windows\Charles Silvano\wallpaper.png'
-
 # Instalando programas padroes
 WinGet Install 7zip.7zip --Silent
 WinGet Install Google.Chrome --Silent
