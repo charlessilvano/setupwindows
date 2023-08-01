@@ -49,9 +49,17 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwi
 Copy-Item -Path "$env:USERPROFILE\Downloads\user.png" -Destination "C:\Windows\Web\Charles Silvano"
 Copy-Item -Path "$env:USERPROFILE\Downloads\wallpaper.png" -Destination "C:\Windows\Web\Charles Silvano"
 
+# Explicar como definir o papel de parede no dispositivo
+Write-Host "A seguir sera aberto o papel de parede padrao e para defini-lo voce poderia usar o comando Windows + B e Windows + L, se estiver tudo certo pressione qualquer tecla."
+pause
+
 # Abrir o papel de parede pelo aplicativo Fotos
 $wallpaper = 'C:\Windows\Web\Charles Silvano\wallpaper.png'
 Start-Process $wallpaper
+
+# Confirmacao de configuração do papel de parede padrao
+Write-Host 'Se o papel de parede estiver definido, feche o aplicativo Fotos e pressione qualquer tecla para continuar'
+pause
 
 # Configurando a foto de usuário e papel de parede
 Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name Wallpaper -Value 'C:\Windows\Web\Charles Silvano\wallpaper.png'
