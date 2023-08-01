@@ -85,6 +85,32 @@ WinGet UnInstall Microsoft.Todos_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Office.OneNote_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
 
+# Como verificar os caches do processador
+Write-Host "Por favor, abra o Gerenciador de Tarefas e na aba Desempenho verifique quais os valores de cacheado processador."
+$input = Read-Host -Prompt "Pressione qualquer tecla para continuar."
+
+# Inserindo o valor do cache L2
+Write-Host "Qual e o valor do cache L2 em KB?"
+$L2 = Read-Host
+
+# Verificando se o processador tem cache L3 e qual o seu valor
+Write-Host "Seu processador tem cache L3?"
+$cacheL3 = Read-Host -Prompt "Digite sim ou nao."
+If ($cacheL3 -eq "sim") {
+Write-Host "Qual e o valor do cache L3 em KB?"
+$L3 = Read-Host
+}
+
+# Inserindo os valores dos caches L2 no registro do sistema
+Write-Host "Alterando o valor do arquivo Dword do cache L2"
+Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management' -Name SecondLevelDataCache -Value $L2 -Type DWord
+
+# Inserindo os valores dos caches L3 no registro do sistema
+If ($cacheL3 -eq "sim") {
+Write-Host "Criando um arquivo Dword do cache L3"
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" -Name ThirdLevelDataCache -Type DWord -Value $L3
+}
+
 # Configurando nome de usuario
 $NewName = Read-Host -Promp "Digite o novo nome de usuario"
 Rename-LocalUser -Name "Usuario" -NewName $NewName
