@@ -6,7 +6,7 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 # Renomear a particao do disco principal
 Import-Module Storage
-Set−Volume −DriveLetter "C" −NewFileSystemLabel "Windows"
+Set−Volume −DriveLetter 'C' −NewFileSystemLabel 'Windows'
 
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
 Write-Host "Inicie a Microsoft Store e atualize todos os programas, antes de continuar com a configuracao"
