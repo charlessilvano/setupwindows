@@ -6,7 +6,7 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 # Renomear a particao do disco principal
 Import-Module Storage
-Set−Volume −DriveLetter 'C' −NewFileSystemLabel 'Windows'
+Set−Volume −DriveLetter "C" −NewFileSystemLabel "Windows"
 
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
 Write-Host "Inicie a Microsoft Store e atualize todos os programas, antes de continuar com a configuracao"
@@ -17,7 +17,7 @@ Write-Host "Atualizacao de programas finalizada"
 Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v1.5.1881/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -OutFile "$env:USERPROFILE\Downloads\Winget.msixbundle"
 
 # Fazer download do certificado de garantia do serviço de formatacao
-Invoke-WebRequest -Uri 'https://raw.github.com/charlessilvano/setupwindows/main/files/CSTI.p12' -OutFile $env:USERPROFILE\Downloads\CSTI.p12
+Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/CSTI.p12" -OutFile "$env:USERPROFILE\Downloads\CSTI.p12"
 
 # Insercao de senha raiz
 $Password = Read-Host -Promp "Digite a senha master"
@@ -55,11 +55,11 @@ Write-Host "A seguir sera aberto o papel de parede padrao e para defini-lo voce 
 pause
 
 # Abrir o papel de parede pelo aplicativo Fotos
-$wallpaper = 'C:\Windows\Web\Charles Silvano\wallpaper.png'
+$wallpaper = "C:\Windows\Web\Charles Silvano\wallpaper.png"
 Start-Process $wallpaper
 
 # Confirmacao de configuração do papel de parede padrao
-Write-Host 'Se o papel de parede estiver definido, feche o aplicativo Fotos e pressione qualquer tecla para continuar'
+Write-Host "Se o papel de parede estiver definido, feche o aplicativo Fotos e pressione qualquer tecla para continuar"
 pause
 
 # Instalando programas padroes
@@ -104,7 +104,7 @@ $L3 = Read-Host
 
 # Inserindo os valores dos caches L2 no registro do sistema
 Write-Host "Alterando o valor do arquivo Dword do cache L2"
-Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management' -Name SecondLevelDataCache -Value $L2 -Type DWord
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" -Name SecondLevelDataCache -Value $L2 -Type DWord
 
 # Inserindo os valores dos caches L3 no registro do sistema
 If ($cacheL3 -eq "sim") {
