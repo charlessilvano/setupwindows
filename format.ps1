@@ -92,6 +92,8 @@ WinGet UnInstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Teams_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Todos_8wekyb3d8bbwe --Silent
+WinGet UnInstall MicrosoftCorporationII.MicrosoftFamily_8wekyb3d8bbwe --Silent
+WinGet UnInstall MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Office.OneNote_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
 
