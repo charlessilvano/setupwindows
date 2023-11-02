@@ -90,6 +90,7 @@ WinGet UnInstall SpotifyAB.SpotifyMusic_zpdnekdrzrea0 --Silent
 WinGet UnInstall Disney.37853FC22B2CE_6rarf9sa4v8jt --Silent
 WinGet UnInstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.Teams_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Todos_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Office.OneNote_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
