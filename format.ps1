@@ -33,6 +33,12 @@ Add-AppxPackage -Path "$env:USERPROFILE\Downloads\Winget.msixbundle"
 # Criando um direto de arquivos de mídia
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 
+# Download e instalacao do DriverEasy
+Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile "$env:USERPROFILE\Downloads\drivereasy.exe"
+# Iniciando a instalacao do DriverEasy
+$drivereasy = "$env:USERPROFILE\Downloads\drivereasy.exe"
+Start-Process -FilePath $drivereasy -Wait
+
 # Download do pacote Microsoft Office
 Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/office.exe" -OutFile "$env:USERPROFILE\Downloads\office.exe"
 
