@@ -12,6 +12,20 @@ cd C:\Temp
 Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile setup.exe
 $drivereasy = "C:\Temp\setup.exe"
 Start-Process -FilePath $drivereasy -Wait
+$folder = "C:\Program Files\Easeware"
+if ($folder -eq "C:\Program Files\Easeware") {
+    $drivereasy = "$folder\DriverEasy\DriverEasy.exe"
+    Start-Process $drivereasy -Wait
+}
+else {
+    $folder = "C:\Program Files (x86)\Easeware"
+    $drivereasy = "$folder\DriverEasy\DriverEasy.exe"
+    Start-Process $drivereasy -Wait
+}
+cd 'C:\Windows\System32\'
+
+# Remocao do DriverEasy
+WinGet Uninstall Easeware.Drivereasy --silent
 
 # Instalacao do modulo de atualizacao do Windows Update pelo Powershell
 Write-Host "Realizando o Update do Windows"
@@ -27,7 +41,9 @@ Remove-Item -Path "C:\Windows\SoftwareDistribution\Download\*" -Recurse
 Remove-Item -Path "$env:USERPROFILE\AppData\Local\Temp\*" -Recurse
 
 # Limpeza interna do sistema
-cleanmgr -Analyzer
+$default = "C:\Windows\System32\"
+cd $default
+Start-Process .\cleanmgr.exe -Wait
 
 # Desfragmentar todo o disco
 defrag /C /U /V
