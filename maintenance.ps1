@@ -1,4 +1,4 @@
-# Download e Instalção do DriverEasy
+# Download e Instalação do DriverEasy
 Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile C:\Temp\setup.exe
 $drivereasy = C:\Temp\setup.exe
 Start-Process -FilePath $drivereasy -Wait
