@@ -1,6 +1,9 @@
 # Desabilitar as restricoes do Powershell
 Set-ExecutionPolicy Unrestricted
 
+# Autorizacao para segurança de repositorio
+Set-PSRepository -Name PSGallery -InstalationPolicy Trusted
+
 # Download e Instalacao do DriverEasy
 Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile C:\Temp\setup.exe
 $drivereasy = C:\Temp\setup.exe
