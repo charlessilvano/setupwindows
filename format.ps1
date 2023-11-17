@@ -12,6 +12,7 @@ Set-Volume -DriveLetter $letter -NewFileSystemLabel $namedisk
 
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
 Write-Host "Inicie a Microsoft Store e atualize todos os programas, antes de continuar com a configuracao"
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 pause
 Write-Host "Atualizacao de programas finalizada"
 
@@ -22,13 +23,14 @@ Write-Host "Atualizacao de programas finalizada"
 Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/files/CSTI.p12" -OutFile "$env:USERPROFILE\Downloads\CSTI.p12"
 
 # Insercao de senha raiz
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 $Password = Read-Host -Promp "Digite a senha master"
 
 # Instalacao do certificado
 Get-ChildItem -Path $env:USERPROFILE\Downloads\CSTI.p12 | Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\Root -Password (ConvertTo-SecureString -String $Password -AsPlainText -Force)
 
 # Executar instalacoo do pacote WinGet
-Add-AppxPackage -Path "$env:USERPROFILE\Downloads\Winget.msixbundle"
+# Add-AppxPackage -Path "$env:USERPROFILE\Downloads\Winget.msixbundle"
 
 # Criando um direto de arquivos de mídia
 New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
@@ -37,6 +39,7 @@ New-Item -ItemType Directory -Path "C:\Windows\Web\Charles Silvano"
 Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile "$env:USERPROFILE\Downloads\drivereasy.exe"
 # Iniciando a instalacao do DriverEasy
 $drivereasy = "$env:USERPROFILE\Downloads\drivereasy.exe"
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 Start-Process -FilePath $drivereasy -Wait
 
 # Download do pacote Microsoft Office
@@ -44,11 +47,15 @@ Invoke-WebRequest -Uri "https://raw.github.com/charlessilvano/setupwindows/main/
 
 # Iniciar instalacao do pacote Microsoft Office
 $office = "$env:USERPROFILE\Downloads\office.exe"
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 Start-Process -FilePath $office -Wait
 
 # Ativacao do Microsoft Office
 $info = "cd %ProgramFiles%\Microsoft Office\Office16 >nul&for /f %x in (dir /b ..\root\Licenses16\Standard2021VL*.xrm-ms) do cscript ospp.vbs /inslic:..\root\Licenses16\%x  >nul&cscript //nologo ospp.vbs /inpkey:KDX7X-BNVR8-TXXGX-4Q7Y8-78VT3  >nul&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo ospp.vbs /setprt:1688 >nul&cscript //nologo ospp.vbs /sethst:e8.us.to >nul&cscript //nologo ospp.vbs /act"
 New-Item -Path "$env:USERPROFILE\Downloads\active.txt" -ItemType File -Value $info
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
+Write-Host "Utilize o texto gerado para fazer a ativar o Microsoft Office"
+pause
 
 # Fazer downloads dos arquivos user e wallpaper
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/charlessilvano/setupwindows/main/files/user.png" -OutFile "$env:USERPROFILE\Downloads\user.png"
@@ -60,6 +67,7 @@ Copy-Item -Path "$env:USERPROFILE\Downloads\wallpaper.png" -Destination "C:\Wind
 
 # Explicar como definir o papel de parede no dispositivo
 Write-Host "A seguir sera aberto o papel de parede padrao e para defini-lo voce poderia usar o comando Windows + B e Windows + L, se estiver tudo certo pressione qualquer tecla."
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 pause
 
 # Abrir o papel de parede pelo aplicativo Fotos
@@ -68,6 +76,7 @@ Start-Process $wallpaper
 
 # Confirmacao de configuração do papel de parede padrao
 Write-Host "Se o papel de parede estiver definido, feche o aplicativo Fotos e pressione qualquer tecla para continuar"
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 pause
 
 # Instalando programas padroes
@@ -99,6 +108,7 @@ WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
 
 # Como verificar os caches do processador
 Write-Host "Por favor, abra o Gerenciador de Tarefas e na aba Desempenho verifique quais os valores de cacheado processador."
+Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 $input = Read-Host -Prompt "Pressione qualquer tecla para continuar"
 
 # Inserindo o valor do cache L2
