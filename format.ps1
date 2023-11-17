@@ -12,6 +12,7 @@ Set-Volume -DriveLetter $letter -NewFileSystemLabel $namedisk
 
 # Iniciando o processo de atualizacao dos aplicativos Na Microsoft Store
 Write-Host "Inicie a Microsoft Store e atualize todos os programas, antes de continuar com a configuracao"
+Start-Process "ms-windows-store://Store"
 Invaoke-WebRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 pause
 Write-Host "Atualizacao de programas finalizada"
