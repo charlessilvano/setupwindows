@@ -1,3 +1,6 @@
+# Desabilitar as restricoes do Powershell
+Set-ExecutionPolicy Unrestricted
+
 # Download e Instalacao do DriverEasy
 Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile C:\Temp\setup.exe
 $drivereasy = C:\Temp\setup.exe
