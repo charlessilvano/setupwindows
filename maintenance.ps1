@@ -2,7 +2,7 @@
 Set-ExecutionPolicy Unrestricted
 
 # Autorizacao para segurança de repositorio
-Set-PSRepository -Name PSGallery -InstalationPolicy Trusted
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 # Download e Instalacao do DriverEasy
 cd C:\Temp
