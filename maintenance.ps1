@@ -5,8 +5,8 @@ Set-ExecutionPolicy Unrestricted
 Set-PSRepository -Name PSGallery -InstalationPolicy Trusted
 
 # Download e Instalacao do DriverEasy
-Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile C:\Temp\setup.exe
-$drivereasy = C:\Temp\setup.exe
+Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile 'C:\Temp\setup.exe'
+$drivereasy = 'C:\Temp\setup.exe'
 Start-Process -FilePath $drivereasy -Wait
 
 # Instalacao do modulo de atualizacao do Windows Update pelo Powershell
