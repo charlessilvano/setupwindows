@@ -77,5 +77,7 @@ defrag /C /U /V
 
 # Renicio da maquina para finalizar as otimizacoes
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
-sfc /scannow
-shutdown -r -t 0
+chkdsk /f
+Sfc /ScanNow
+Dism /Online /Cleanup-Image /RestoreHealth
+ShutDown -r -t 0
