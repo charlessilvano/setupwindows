@@ -12,6 +12,7 @@ cd C:\Temp
 Invoke-WebRequest -Uri "https://www.drivereasy.com/DriverEasy_Setup.exe" -OutFile setup.exe
 $drivereasy = "C:\Temp\setup.exe"
 Start-Process -FilePath $drivereasy -Wait
+Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 $folder = "C:\Program Files\Easeware"
 if ($folder -eq "C:\Program Files\Easeware") {
     $drivereasy = "$folder\DriverEasy\DriverEasy.exe"
@@ -22,7 +23,9 @@ else {
     $drivereasy = "$folder\DriverEasy\DriverEasy.exe"
     Start-Process $drivereasy -Wait
 }
+Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 cd 'C:\Windows\System32\'
+Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 
 # Remocao do DriverEasy
 WinGet Uninstall Easeware.Drivereasy --silent
@@ -31,7 +34,9 @@ WinGet Uninstall Easeware.Drivereasy --silent
 Write-Host "Realizando o Update do Windows"
 Install-Module PSWindowsUpdate
 Get-WindowsUpdate
+Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 Install-WindowsUpdate
+Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 
 # Fazer a limpeza dos arquivos temporarios
 Write-Host "Efetuando o processo de limpeza do Windows"
@@ -49,3 +54,8 @@ Start-Process .\cleanmgr.exe -Wait
 defrag /C /U /V
 defrag /C /U /V
 defrag /C /U /V
+
+# Renicio da maquina para finalizar as otimizacoes
+Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
+sfc /scannow
+shutdown -r -s 0
