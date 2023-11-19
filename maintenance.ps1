@@ -78,4 +78,4 @@ defrag /C /U /V
 # Renicio da maquina para finalizar as otimizacoes
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 sfc /scannow
-shutdown -r -s 0
+shutdown -r -t 0
