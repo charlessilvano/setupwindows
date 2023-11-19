@@ -38,6 +38,26 @@ Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/wit
 Install-WindowsUpdate
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 
+# Removendo programas sem utilidade
+WinGet UnInstall microsoft.onedrive --Silent
+WinGet UnInstall Microsoft.BingNews_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.GetHelp_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.Getstarted_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.SkypeApp_kzf8qxf38zg5c --Silent
+WinGet UnInstall Microsoft.Microsoft3DViewer_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.MixedReality.Portal_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.MicrosoftOfficeHub_8wekyb3d8bbwe --Silent
+WinGet UnInstall SpotifyAB.SpotifyMusic_zpdnekdrzrea0 --Silent
+WinGet UnInstall Disney.37853FC22B2CE_6rarf9sa4v8jt --Silent
+WinGet UnInstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.Teams_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.Todos_8wekyb3d8bbwe --Silent
+WinGet UnInstall MicrosoftCorporationII.MicrosoftFamily_8wekyb3d8bbwe --Silent
+WinGet UnInstall MicrosoftCorporationII.QuickAssist_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.Office.OneNote_8wekyb3d8bbwe --Silent
+WinGet UnInstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe --Silent
+
 # Fazer a limpeza dos arquivos temporarios
 Write-Host "Efetuando o processo de limpeza do Windows"
 Remove-Item -Path "C:\Windows\Temp\*" -Recurse
