@@ -39,7 +39,7 @@ Install-WindowsUpdate
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 
 # Removendo programas sem utilidade
-WinGet UnInstall microsoft.onedrive --Silent
+# WinGet UnInstall microsoft.onedrive --Silent
 WinGet UnInstall Microsoft.BingNews_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.GetHelp_8wekyb3d8bbwe --Silent
 WinGet UnInstall Microsoft.Getstarted_8wekyb3d8bbwe --Silent
@@ -71,9 +71,9 @@ cd $default
 Start-Process .\cleanmgr.exe -Wait
 
 # Desfragmentar todo o disco
-defrag /C /U /V
-defrag /C /U /V
-defrag /C /U /V
+defrag /O /U /V
+defrag /O /U /V
+defrag /O /U /V
 
 # Renicio da maquina para finalizar as otimizacoes
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
