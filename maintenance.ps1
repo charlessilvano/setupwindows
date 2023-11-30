@@ -32,7 +32,7 @@ WinGet Uninstall Easeware.Drivereasy --silent
 
 # Instalacao do modulo de atualizacao do Windows Update pelo Powershell
 Write-Host "Realizando o Update do Windows"
-Install-Module PSWindowsUpdate
+Install-Module PSWindowsUpdate -Force
 Get-WindowsUpdate
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
 Install-WindowsUpdate
