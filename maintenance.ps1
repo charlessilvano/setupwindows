@@ -71,9 +71,9 @@ cd $default
 Start-Process .\cleanmgr.exe -Wait
 
 # Desfragmentar todo o disco
-defrag /O /U /V
-defrag /O /U /V
-defrag /O /U /V
+defrag /C /O /U /V
+defrag /C /O /U /V
+defrag /C /O /U /V
 
 # Renicio da maquina para finalizar as otimizacoes
 Invoke-webRequest -Uri "https://maker.ifttt.com/trigger/checar_comandos/json/with/key/eAB2rNKFcLikbDNdEl7k0ukFZgkHaxOpnU5MeP-s68J"
